@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Frases de saludo iterativo con bucle</title>
+</head>
+<body>
+
+<h1>Frases de saludo iterativo con bucle</h1>
+
+<label for="cantidad">Cantidad de saludos:</label>
+<input type="number" id="cantidad">
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre">
+
+<button onclick="generarSaludos()">Generar saludos</button>
+
+<div id="resultados"></div>
+
+<script>
+function generarSaludos() {
+    var cantidad = parseInt(document.getElementById("cantidad").value);
+    var nombre = document.getElementById("nombre").value;
+
+    var resultados = ""; // Stringa per memorizzare i risultati dei saluti
+
+    // Verifica che la quantità inserita sia un numero valido
+    if (isNaN(cantidad) || cantidad <= 0) {
+        alert("Inserisci un numero valido di saluti.");
+        return;
+    }
+
+    // Ciclo per generare i saluti e memorizzare i risultati
+    for (var i = 0; i < cantidad; i++) {
+        resultados += "Hola " + nombre + "<br>"; // Aggiunge il saluto alla stringa dei risultati
+    }
+
+    // Mostra i risultati sulla pagina HTML
+    document.getElementById("resultados").innerHTML = resultados;
+}
+</script>
+
+</body>
+</html>
