@@ -27,27 +27,27 @@ function realizarOperacion() {
     var numero2 = parseFloat(document.getElementById("numero2").value);
     var operacion = document.getElementById("operacion").value;
 
-    // Verifica che i numeri siano validi
+    // Verificacion numeros
     if (isNaN(numero1) || isNaN(numero2)) {
-        alert("Inserisci numeri validi.");
-        document.getElementById("resultado").innerHTML = ""; // Pulisce il risultato
+        alert("Escribir numeros");
+        document.getElementById("resultado").innerHTML = ""; // limpia el resultado
     } else if (operacion === '+') {
-        sumar(numero1, numero2); // Chiama la funzione sumar()
+        sumar(numero1, numero2); // Call sumar()
     } else if (operacion === '-') {
-        restar(numero1, numero2); // Chiama la funzione restar()
+        restar(numero1, numero2); // call restar()
     } else {
         alert("Inserisci un'operazione valida (+/-).");
-        document.getElementById("resultado").innerHTML = ""; // Pulisce il risultato
+        document.getElementById("resultado").innerHTML = ""; // limpia el resultado
     }
 }
 
-// Funzione per sommare due numeri
+// funcion sumar
 function sumar(a, b) {
     var resultado = a + b;
     document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
 }
 
-// Funzione per sottrarre due numeri
+// Funcion restar
 function restar(a, b) {
     var resultado = a - b;
     document.getElementById("resultado").innerHTML = "Resultado: " + resultado;

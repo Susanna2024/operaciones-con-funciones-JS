@@ -22,20 +22,20 @@ function generarSaludos() {
     var cantidad = parseInt(document.getElementById("cantidad").value);
     var nombre = document.getElementById("nombre").value;
 
-    var resultados = ""; // Stringa per memorizzare i risultati dei saluti
+    var resultados = ""; // memorizar resultados saludos
 
-    // Verifica che la quantità inserita sia un numero valido
+    // Verification 
     if (isNaN(cantidad) || cantidad <= 0) {
-        alert("Inserisci un numero valido di saluti.");
+        alert("Escribir un numero.");
         return;
     }
 
-    // Ciclo per generare i saluti e memorizzare i risultati
+    // Bucle para hacer saludos i memorizar resultados
     for (var i = 0; i < cantidad; i++) {
-        resultados += "Hola " + nombre + "<br>"; // Aggiunge il saluto alla stringa dei risultati
+        resultados += "Hola " + nombre + "<br>"; // resultado con espacio 
     }
 
-    // Mostra i risultati sulla pagina HTML
+    // mostrar resultados en html
     document.getElementById("resultados").innerHTML = resultados;
 }
 </script>
